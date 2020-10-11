@@ -85,11 +85,15 @@ def rsaExecute():
 
     encryptionButton = Button(text='Encrypt', command=encryptRSA, width=50, height=5)
     decryptionButton = Button(text='Decrypt', command=decryptRSA, width=50, height=5)
-    backButton = Button(text='Back', command=backToStart, width=50, height=5)
+    backButton = Button(text='Back', command=backToStartRSA, width=50, height=5)
     encryptionButton.grid(column=1, row=1)
     decryptionButton.grid(column=1, row=2)
     backButton.grid(column=1, row=3)
 
+def backToStartRSA():
+    rsaWindow.destroy()
+    start()    
+    
 def matrix(x,y,initial):
     return [[initial for i in range(x)] for j in range(y)]
 
@@ -298,14 +302,14 @@ def encryptPlayfair():
 
     encryptionButton = Button(text = 'Encrypt',command= encryptPlayfair, width = 50 , height = 5 )
     decryptionButton = Button(text = 'Decrypt',command= decryptPLayfair, width = 50 , height = 5 )
-    backButton = Button(text = 'Back',command= backToStart, width = 50 , height = 5 )
+    backButton = Button(text = 'Back',command= backToStartPF, width = 50 , height = 5 )
     encryptionButton.grid(column = 1 , row =  1)
     decryptionButton.grid(column = 1 , row =  2)
     backButton.grid(column = 1 , row =  3)
 
     playfairWindow.mainloop()
     
- def backToStart():
+def backToStartPF():
     playfairWindow.destroy()
     start()
     
