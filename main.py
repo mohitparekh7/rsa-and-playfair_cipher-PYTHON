@@ -313,5 +313,18 @@ def backToStartPF():
     playfairWindow.destroy()
     start()
     
+def start():
+    global t
+    t = Tk()
+    t.title('Cryptography')
+    t.resizable(width = False  , height = True)
+
+    rsa_button = Button(text = 'RSA',command= rsaExecute, width = 50 , height = 5 )
+    playfair_button = Button(text = 'PlayFair',command = playfairExecute, width = 50 , height = 5)
+    rsa_button.grid(column = 1 , row =  1)
+    playfair_button.grid(column = 1, row = 2)
+
+    t.mainloop()
+    
  start()
     
